@@ -6,7 +6,7 @@
 /*   By: dysotoma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/21 20:00:14 by dysotoma          #+#    #+#             */
-/*   Updated: 2018/02/23 12:04:48 by dysotoma         ###   ########.fr       */
+/*   Updated: 2018/02/26 12:32:19 by dysotoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,10 @@ static int	ft_ascii_check(char check)
 	return (0);
 }
 
-int			ft_iscii(int c)
+int			ft_isascii(int c)
 {
 	unsigned char uc;
 
 	uc = (unsigned char)c;
-	if (ft_ascii_check(uc))
-		return (1);
-	return (0);
+	return (ft_ascii_check(uc));
 }

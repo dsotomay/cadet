@@ -12,16 +12,10 @@
 
 #include "libft.h"
 
-char	*ft_toupper(char *str)
+int		ft_toupper(int c)
 {
-	int	i;
 
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] >= 'a' && str[i] <= 'z')
-			str[i] -= 32;
-		i++;
-	}
-	return (str);
+	if ((unsigned char)c >= 'a' && (unsigned char)c <= 'z')
+		return (c -= 32);
+	return (c);
 }

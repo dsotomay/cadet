@@ -19,19 +19,7 @@ static int	ft_print_check(char check)
 	return (0);
 }
 
-int			ft_isprint(char *str)
+int			ft_isprint(int c)
 {
-	int i;
-
-	i = 0;
-	if (str[i] == '\0')
-		return (1);
-	while (str[i])
-	{
-		if (ft_print_check(str[i]))
-			i++;
-		else
-			return (0);
-	}
-	return (1);
+	return (ft_print_check((unsigned char)c));
 }

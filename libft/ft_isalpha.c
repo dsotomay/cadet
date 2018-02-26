@@ -14,24 +14,12 @@
 
 static int	ft_alpha_check(char check)
 {
-	if (check >= 'A' && check <= 'Z' || check >= 'a' && check <= 'z')
+	if ((check >= 'A' && check <= 'Z') || (check >= 'a' && check <= 'z'))
 		return (1);
 	return (0);
 }
 
 int			ft_isalpha(int c)
 {
-	int i;
-
-	i = 0;
-	if (str[i] == '\0')
-		return (1);
-	while (str[i])
-	{
-		if (ft_alpha_check(str[i]))
-			i++;
-		else
-			return (0);
-	}
-	return (1);
+	return (ft_alpha_check((unsigned char)c));
 }
