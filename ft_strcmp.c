@@ -14,9 +14,9 @@
 
 int		ft_strcmp(const char *str1, const char *str2)
 {
-	int i;
-	unsigned char *s1;
-	unsigned char *s2;
+	int				i;
+	unsigned char	*s1;
+	unsigned char	*s2;
 
 	i = 0;
 	s1 = (unsigned char *)str1;

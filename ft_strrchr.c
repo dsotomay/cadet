@@ -19,7 +19,7 @@ char	*ft_strrchr(const char *str, int c)
 	i = 0;
 	while (str[i])
 		i++;
-	while (i >= 0 && str[i] != (unsigned char) c)
+	while (i >= 0 && str[i] != (unsigned char)c)
 	{
 		if (i == 0)
 			return (NULL);

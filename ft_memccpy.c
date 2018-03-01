@@ -14,8 +14,8 @@
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	unsigned char *dest;
-	const unsigned char *sorc;
+	unsigned char		*dest;
+	const unsigned char	*sorc;
 
 	dest = dst;
 	sorc = src;
@@ -27,4 +27,3 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	}
 	return (0);
 }
-

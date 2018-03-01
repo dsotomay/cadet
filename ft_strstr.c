@@ -21,14 +21,14 @@ char	*ft_strstr(const char *str, const char *to_find)
 	if (*str == 0 && *to_find == 0)
 		return ((char *)str);
 	if (*to_find == '\0')
-		return ((char *) str);
+		return ((char *)str);
 	while (str[i])
 	{
 		j = 0;
 		while (str[i + j] == to_find[j])
 		{
 			if (to_find[j + 1] == '\0')
-				return ((char *) str + i);
+				return ((char *)str + i);
 			j++;
 		}
 		i++;
