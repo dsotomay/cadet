@@ -1,7 +1,7 @@
 NAME = libft.a
 HEADER = -c
-CONFIG = gcc $(HEADER) -Wall -Wextra -Werror $(SRC)
-CONFIG2 = ar rc $(NAME) $(OBJ)
+CONFIG = gcc $(HEADER) -Wall -Wextra -Werror $(SRC) -I .
+CONFIG2 = ar rc $(NAME) $(OBJ) -I .
 CONFIG3 = ranlib $(NAME)
 SRC = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c\
 ft_isprint.c ft_memccpy.c ft_memcpy.c ft_memset.c ft_strcat.c ft_strchr.c\
