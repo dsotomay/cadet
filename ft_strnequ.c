@@ -24,7 +24,7 @@ int		ft_strnequ(char const *s1, char const *s2, size_t n)
 		else
 			return (1);
 	}
-	if (s1[i] || i == n)
+	if (!s1[i] || i == n)
 		return (1);
 	return (0);
 }
