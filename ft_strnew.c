@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dysotoma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/20 16:30:56 by dysotoma          #+#    #+#             */
-/*   Updated: 2018/02/21 09:05:22 by dysotoma         ###   ########.fr       */
+/*   Created: 2018/03/02 13:14:58 by dysotoma          #+#    #+#             */
+/*   Updated: 2018/03/02 13:15:02 by dysotoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strcmp(const char *str1, const char *str2)
+char	*ft_strnew(size_t size)
 {
-	int				i;
-	unsigned char	*s1;
-	unsigned char	*s2;
+	char *str;
 
-	i = 0;
-	s1 = (unsigned char *)str1;
-	s2 = (unsigned char *)str2;
-	while (s1[i] == s2[i])
-	{
-		if (s1[i] == '\0')
-			return (0);
-		i++;
-	}
-	return (s1[i] - s2[i]);
+	if ((str = (char *)malloc(sizeof(char) * (size + 1))) == NULL)
+		return (NULL);
+	ft_bzero(str, size + 1);
+	return (str);
 }

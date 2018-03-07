@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dysotoma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/20 16:30:56 by dysotoma          #+#    #+#             */
-/*   Updated: 2018/02/21 09:05:22 by dysotoma         ###   ########.fr       */
+/*   Created: 2018/03/02 21:21:33 by dysotoma          #+#    #+#             */
+/*   Updated: 2018/03/02 21:21:35 by dysotoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strcmp(const char *str1, const char *str2)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int				i;
-	unsigned char	*s1;
-	unsigned char	*s2;
+	unsigned int	i;
+	char			*str;
 
 	i = 0;
-	s1 = (unsigned char *)str1;
-	s2 = (unsigned char *)str2;
-	while (s1[i] == s2[i])
+	str = ft_strnew(ft_strlen(s));
+	if (str == NULL)
+		return (NULL);
+	while (s[i])
 	{
-		if (s1[i] == '\0')
-			return (0);
+		str[i] = f(i, s[i]);
 		i++;
 	}
-	return (s1[i] - s2[i]);
+	return (str);
 }
